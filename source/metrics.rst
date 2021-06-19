@@ -6,8 +6,8 @@ Metrics
 Routinator's :ref:`monitoring service <doc_routinator_monitoring>` provides 
 comprehensive metrics in two formats:
 
- - JSON format at the :command:`/api/v1/status` endpoint
- - Prometheus format at the :command:`/metrics` endpoint
+ - :ref:`JSON format <doc_routinator_metrics_json>` at the :command:`/api/v1/status` endpoint
+ - :ref:`Prometheus format <doc_routinator_metrics_prometheus>` at the :command:`/metrics` endpoint
  
 Here you can find an overview of all metrics and their meaning.
 
