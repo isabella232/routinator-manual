@@ -86,7 +86,7 @@ file of the RRDP repository, or the base URI of the rsync repository.
         (.roa), or Ghostbuster  Records (.gbr) and have the state *invalid*.
 
 The following metrics all have just one label, either ``name`` in case of a 
-trust achor or ``uri`` in case of a repository:
+trust anchor or ``uri`` for repositories:
 
 ``routinator_{ta,repository}_valid_vrps_total``
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` found to be
