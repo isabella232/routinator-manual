@@ -105,8 +105,8 @@ RPKI repository. They contain the following information:
     resulting from ROAs containing the same authorisation.
 
     Note that if a VRP appears in multiple trust anchors or repositories,
-    which occurence is considered the duplicate depends on the order of
-    processing which may change between validatio runs. Thus, this number
+    which occurrence is considered the duplicate depends on the order of
+    processing which may change between validation runs. Thus, this number
     may change unexpectedly.
 
 ``vrpsFinal``
@@ -153,7 +153,7 @@ RPKI repository. They contain the following information:
     The number of invalid :term:`certificate revocation lists <Certificate 
     Revocation List (CRL)>`.
 
-    A manifest is invalid if it is not correctly encoded or
+    A CRL is invalid if it is not correctly encoded or
     is not correctly signed by the issuing CA.
 
 ``staleCRLs``
@@ -338,19 +338,3 @@ server.
 
 ``bytesRead`` and ``bytesWritten``
    The number of bytes read from and written to HTTP clients.
-
-
-.. _doc_routinator_metrics_prometheus:
-
-Prometheus
-----------
-
-``routinator_{ta,repository}_valid_vrps_total``
-    The total number of :term:`VRPs <Validated ROA Payload (VRP)>` found to be
-    present and valid. This metric is exposed for each trust anchor and 
-    repository.
-    
-``routinator_{ta,repository}_invalid_vrps_total``
-    The total number of :term:`VRPs <Validated ROA Payload (VRP)>` found to be
-    invalid. This metric is exposed for each trust anchor and repository.
-        
