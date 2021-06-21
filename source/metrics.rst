@@ -59,7 +59,7 @@ The JSON metrics consist of an object with the following members:
 
 ``vrpsAddedLocally``
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` added to the
-    final data set from :ref:`local exception
+    final data set from :ref:`local exceptions
     <doc_routinator_local_exceptions>`.
 
 ``rsync``
@@ -239,8 +239,8 @@ For each repository updated via rsync the following values are given.
 
 .. _doc_routinator_metrics_json_rrdp:
 
-Rsync Update Metrics
-""""""""""""""""""""
+RRDP Update Metrics
+"""""""""""""""""""
 
 For each repository updated via RRDP the following values are given.
 
