@@ -84,25 +84,25 @@ file of the RRDP repository, or the base URI of the rsync repository.
       * ``other`` - The number of objects found that are not certificates 
         (.cer), Certificate  Revocation Lists (.crl), manifests (.mft), ROAs
         (.roa), or Ghostbuster  Records (.gbr) and have the state *invalid*.
-      
+
+The following metrics all have just one label, either ``name`` in case of a 
+trust achor or ``uri`` in case of a repository:
+
 ``routinator_{ta,repository}_valid_vrps_total``
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` found to be
-    present and valid. This metric has one label: either ``name`` or ``uri``.
+    present and valid. 
     
 ``routinator_{ta,repository}_unsafe_vrps_total``
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` found to be
-    :term:`unsafe <Unsafe VRPs>`. This metric has one label: either ``name`` 
-    or ``uri``.
+    :term:`unsafe <Unsafe VRPs>`. 
     
 ``routinator_{ta,repository}_locally_filtered_vrps_total``
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` that are filtered
     as the result of a :ref:`local exception <doc_routinator_local_exceptions>`.
-    This metric has one label: either ``name``  or ``uri``.
 
 ``routinator_{ta,repository}_duplicate_vrps_total``
     The number of duplicate :term:`VRPs <Validated ROA Payload (VRP)>`
-    resulting from ROAs containing the same authorisation. This metric has one 
-    label: either ``name``  or ``uri``.
+    resulting from ROAs containing the same authorisation. 
 
     Note that if a VRP appears in multiple trust anchors or repositories,
     which occurrence is considered the duplicate depends on the order of
@@ -113,8 +113,7 @@ file of the RRDP repository, or the base URI of the rsync repository.
     The number of :term:`VRPs <Validated ROA Payload (VRP)>` that are
     contributed by this trust anchor or repository to the final set provided to
     your routers. This is the total number of VRPs, minus the ones that are
-    locally filtered duplicate and, if configured to be dropped, unsafe. This
-    metric has one  label: either ``name``  or ``uri``.
+    locally filtered duplicate and, if configured to be dropped, unsafe.
 
 .. _doc_routinator_metrics_prometheus_rsync:
 
