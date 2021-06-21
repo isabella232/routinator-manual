@@ -5,26 +5,32 @@ Monitoring
 
 The HTTP server in Routinator provides endpoints for monitoring the application.
 To launch Routinator in server mode on 192.0.2.13 with RTR running on port 3323
-and HTTP on 9556, use the following command:
+and HTTP on 8323, use the following command:
 
 .. code-block:: text
 
-   routinator server --rtr 192.0.2.13:3323 --http 192.0.2.13:9556
+   routinator server --rtr 192.0.2.13:3323 --http 192.0.2.13:8323
 
 The HTTP service has these monitoring endpoints on the following paths:
 
 :command:`/version`
-     Returns the version of the Routinator instance
+    Returns the version of the Routinator instance
 
 :command:`/metrics`
-     Exposes time series data specifically for
-     `Prometheus <https://prometheus.io/>`_, for which `dedicated port 9556
-     <https://github.com/prometheus/prometheus/wiki/Default-port-allocations>`_
-     is reserved.
+    Exposes exhaustive time series data specifically for `Prometheus
+    <https://prometheus.io/>`_, containing metrics on all trust anchors,
+    repositories, RRDP and rsync connections, as well as RTR and HTTP sessions.
+    If desired, dedicated `port 9556
+    <https://github.com/prometheus/prometheus/wiki/Default-port-allocations>`_
+    is allocated for the exporter.
+     
+:command:`/api/v1/status`
+    Returns exhaustive information in JSON format on all trust anchors,
+    repositories, RRDP and rsync connections, as well as RTR and HTTP sessions.
+    This data set provides the source for the Routinator user interface.
 
 :command:`/status`
-     Returns a subset of the information from the :command:`/metrics` endpoint
-     in a more concise format
+    Returns a subset of the metrics information in a concise plain text format
 
 Metrics
 -------
@@ -36,7 +42,7 @@ Update metrics
   - The retrieval duration and `HTTP status code <https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>`_ for each RRDP publication point 
 
 Object metrics
-  - For each crypotographic object that can appear in the RPKI, the number of valid, invalid and stale items per trust anchor and repository
+  - For each cryptographic object that can appear in the RPKI, the number of valid, invalid and stale items per trust anchor and repository
   - The number of validated ROA payloads (VRPs) per Trust Anchor and repository
   - The number of VRPs added and excluded locally
 
@@ -50,6 +56,9 @@ HTTP server
   - The current number of HTTP connections
   - The total amount of bytes sent and received over the HTTP connection
   - The number of HTTP requests
+
+Refer to the :ref:`metrics reference <doc_routinator_metrics>` for a complete 
+overview.
 
 .. _doc_routinator_monitoring_grafana:
 
