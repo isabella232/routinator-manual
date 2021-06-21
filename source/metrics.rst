@@ -43,7 +43,7 @@ The JSON metrics consist of an object with the following members:
     any configured :ref:`testbeds <doc_routinator_testbed>` as well.
 
     Each element of this object contains a
-    `publication metrics value <doc_routinator_metrics_json_publication>`
+    :ref:`publication metrics value <doc_routinator_metrics_json_publication>`
     as described below.
 
 ``repositories``
@@ -53,7 +53,7 @@ The JSON metrics consist of an object with the following members:
     old data.
 
     Each element of this object contains a
-    `publication metrics value <doc_routinator_metrics_json_publication>`
+    :ref:`publication metrics value <doc_routinator_metrics_json_publication>`
     as described below. In addition, there is a member ``type`` that
     describes whether the repository is an RRDP or rsync repository.
 
@@ -67,7 +67,7 @@ The JSON metrics consist of an object with the following members:
 
     This is an object with one element for each repository that was
     updated via rsync during the last validation run. Each element contains
-    an `rsync update metrics value <doc_routinator_metrics_json_rsync>`
+    an :ref:`rsync update metrics value <doc_routinator_metrics_json_rsync>`
     as described below.
 
 ``rrdp``
@@ -75,16 +75,16 @@ The JSON metrics consist of an object with the following members:
 
     This is an object with one element for each repository that was
     updated via rsync during the last validation run. Each element contains
-    an `RRDP update metrics value <doc_routinator_metrics_json_rrdp>`
+    an :ref:`RRDP update metrics value <doc_routinator_metrics_json_rrdp>`
     as described below.
 
 ``rtr``
     Metrics for the built-in RTR server. See
-    `RTR metrics <doc_routinator_metrics_json_rtr>` below.
+    :ref:`RTR metrics <doc_routinator_metrics_json_rtr>` below.
 
 ``http``
     Metrics for the built-in HTTP server. See
-    `RTR metrics <doc_routinator_metrics_json_http>` below.
+    :ref:`RTR metrics <doc_routinator_metrics_json_http>` below.
 
 
 .. _doc_routinator_metrics_json_publication:
