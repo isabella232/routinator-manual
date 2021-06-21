@@ -97,7 +97,8 @@ songs on `Spotify
    :name: toc-reference
    
    manual-page
-   metrics
+   json-metrics
+   prometheus-metrics
    glossary
 
 .. history
