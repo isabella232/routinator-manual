@@ -1,7 +1,7 @@
 .. _doc_routinator:
 
-Routinator – *main* branch
-==========================
+Routinator 0.10.0 ‘Through Many Dangers, Toils, and Snares’
+===========================================================
 
 .. only:: html
 
