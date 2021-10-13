@@ -727,6 +727,8 @@ These can be requested by providing different commands on the command line.
 
        .. option:: --rtr-tcp-keepalive=seconds
        
+              **Note:** This functionality is broken in 0.10.0 and 0.10.1.
+              
               The number of seconds to wait before sending a TCP keepalive on an
               established RTR  connection. By  default, TCP keepalive is
               enabled on all RTR connections with an idle time of 60 seconds. 
