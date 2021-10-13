@@ -727,7 +727,9 @@ These can be requested by providing different commands on the command line.
 
        .. option:: --rtr-tcp-keepalive=seconds
        
-              **Note:** This functionality is broken in 0.10.0 and 0.10.1.
+              **Note:** This functionality is 
+              `broken <https://github.com/NLnetLabs/routinator/issues/320>`_ in 
+              0.10.0 and 0.10.1.
               
               The number of seconds to wait before sending a TCP keepalive on an
               established RTR  connection. By  default, TCP keepalive is
@@ -1109,6 +1111,10 @@ listen-systemd
       323.
 
 rtr-tcp-keepalive
+      **Note:** This functionality is 
+      `broken <https://github.com/NLnetLabs/routinator/issues/320>`_ in 0.10.0
+      and 0.10.1.
+      
       An integer value specifying the number of seconds to wait before sending a
       TCP keepalive on an established RTR connection. If this option is missing,
       TCP keepalive will be enabled on all RTR connections with an idle time of
