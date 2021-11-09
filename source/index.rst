@@ -1,7 +1,7 @@
 .. _doc_routinator:
 
-Routinator – *main* branch
-==========================
+Routinator 0.10.2 ‘Skuffet, men ikke overrasket’
+================================================
 
 .. only:: html
 
